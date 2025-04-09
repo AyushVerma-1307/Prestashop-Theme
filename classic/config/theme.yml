@@ -1,11 +1,9 @@
-name: classic
-display_name: Classic
+name: classicchild
+display_name: Iliana Store
 version: 1.0.0
 author:
-  name: "PrestaShop Team"
-  email: "pub@prestashop.com"
-  url: "http://www.prestashop.com"
-
+  name: "Iliana"
+parent: classic
 meta:
   compatibility:
       from: 1.7.0.0
@@ -28,7 +26,7 @@ meta:
 assets:
   # If you're using this theme as child and you want to load
   # the parent theme assets, uncomment this line.
-#  use_parent_assets: true
+  use_parent_assets: true
 
   # The following lines are showing how to load assets in your page
   # Uncomment and change value to start loading css or js files
@@ -51,8 +49,8 @@ global_settings:
   configuration:
     PS_IMAGE_QUALITY: png
   modules:
-   to_enable:
-     - ps_linklist
+  to_enable:
+    - ps_linklist
   hooks:
     modules_to_hook:
       displayAfterBodyOpeningTag:

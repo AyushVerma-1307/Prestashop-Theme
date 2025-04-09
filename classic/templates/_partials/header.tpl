@@ -33,11 +33,8 @@
     <div class="container">
       <div class="row">
         <div class="hidden-sm-down">
-          <div class="col-md-5 col-xs-12">
-            {hook h='displayNav1'}
-          </div>
-          <div class="col-md-7 right-nav">
-              {hook h='displayNav2'}
+          <div class="text-sm-center text-md-center h1 pt-1" style="font-size:4em;">
+            Iliana
           </div>
         </div>
         <div class="hidden-md-up text-sm-center mobile">
@@ -57,8 +54,8 @@
 {block name='header_top'}
   <div class="header-top">
     <div class="container">
-       <div class="row">
-        <div class="col-md-2 hidden-sm-down" id="_desktop_logo">
+      <div class="row">
+        <div class="col-md-2 hidden-xl-down" id="_desktop_logo">
             {if $page.page_name == 'index'}
               <h1>
                 <a href="{$urls.base_url}">
@@ -72,7 +69,9 @@
             {/if}
         </div>
         <div class="col-md-10 col-sm-12 position-static">
-          {hook h='displayTop'}
+          <div class="row">
+            {hook h='displayTop'}
+          </div>
           <div class="clearfix"></div>
         </div>
       </div>
