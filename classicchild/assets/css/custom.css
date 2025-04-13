@@ -1,0 +1,146 @@
+/*
+ * Custom code goes here.
+ * A template should always ship with an empty custom.css
+ */
+
+#_desktop_user_info{
+    a {
+        i {
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+#cart-label{
+    display: none;
+}
+
+.header-element{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.text-right{
+    text-align: right;
+}
+#form-button{
+    background: none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.search-bar-wrapper {
+    position: fixed;
+    top: -70px; /* Fixed position where the animation starts */
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Initially hidden */
+    background: white;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out; /* Smooth animation */
+    display: none;
+}
+
+.search-bar-wrapper.active {
+    z-index: 10; /* Bring it to the front */
+    top:110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search_widget{
+    width: 0px;
+    float: right;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #ff0000;
+}
+
+.search-button {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+
+.simple-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes items align horizontally */
+    gap: 30px; /* Space between menu items */
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.simple-nav li {
+    display: block;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.simple-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    white-space: nowrap; /* Prevent text from wrapping inside links */
+}
+
+.simple-nav a:hover,
+.simple-nav a.active {
+    color: #283b50;
+    border-bottom: 2px solid #283b50;
+}
+/* Center the nav bar items only on medium screens */
+@media (min-width: 768px) and (max-width: 991px) {
+    .simple-nav {
+        justify-content: center; /* Center the items horizontally */
+    }
+    .search-bar-wrapper.active {
+        top:203px;
+    }
+
+}
+
+.material-icons {
+    font-size: 26px; /* Adjust the size as needed */
+}
+
+.custom-block {
+    background-color: #f9f9f9;
+    text-align: center;
+    border: 1px solid #ddd;
+}  
