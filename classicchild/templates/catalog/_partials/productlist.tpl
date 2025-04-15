@@ -22,28 +22,8 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<div class="w-100">
-    {assign var='counter' value=0}
+<div class="products{if !empty($cssClass)} {$cssClass}{/if}" itemscope itemtype="http://schema.org/ItemList">
     {foreach from=$products item="product" key="position"}
-        {if $counter < 4}
-            {if $counter == 0}
-                <div class="w-100">
-                    <img
-                        src="{$product.cover.bySize.home_default.url}"
-                        alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
-                        style="width:100%;height:500px;padding-bottom:20px"
-                    />
-                </div>
-            {else}
-                <div class="col-md-4 col-xs-12">
-                    <img
-                        src="{$product.cover.bySize.home_default.url}"
-                        alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
-                        style="width:100%;"
-                    />
-                </div>
-            {/if}
-            {assign var='counter' value=$counter+1}
-        {/if}
+        {include file="catalog/_partials/miniatures/product.tpl" product=$product position=$position}
     {/foreach}
 </div>

@@ -42,17 +42,11 @@
         {include file='catalog/_partials/product-activation.tpl'}
       {/block}
 
-      <header id="header" style="position:fixed; top:0; z-index:100;width: 100%;">
+      <header id="header" class="navbar-header">
         {block name='header'}
           {include file='_partials/header.tpl'}
         {/block}
       </header>
-
-      <section id="homepage-product">
-        {block name='homepage_product'}
-          {include file='_partials/homepage-product.tpl'}
-        {/block}
-      </section>
 
       {block name='notifications'}
         {include file='_partials/notifications.tpl'}

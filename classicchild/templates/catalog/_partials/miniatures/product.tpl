@@ -26,7 +26,7 @@
 <div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
   {if isset($position)}<meta itemprop="position" content="{$position}" />{/if}
   <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemprop="item" itemscope itemtype="http://schema.org/Product">
-    <div class="thumbnail-container">
+    <div class="custom_class thumbnail-container">
       {block name='product_thumbnail'}
         {if $product.cover}
           <a href="{$product.url}" class="thumbnail product-thumbnail">

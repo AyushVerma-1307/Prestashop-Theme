@@ -29,26 +29,26 @@
 {/block}
 
 {block name='header_nav'}
-  <nav class="header-nav" style="border-bottom: 0px !important;">
-    <div class="container">
+  <nav class="header-nav iliana-header-nav">
+    <div class="container-fluid">
       <div class="row">
         <div class="hidden-sm-down">
           <div class="text-sm-center text-md-center h1 pt-1">
             <a href="{$urls.base_url}">
-              <img src="{$urls.theme_assets}img/iliana.PNG" alt="Iliana Logo" style="max-width: 50%; width:20%; height: auto; ">
+              <img src="{$urls.theme_assets}img/iliana.PNG" alt="test" style="max-width: 300px; width: 150px;">
             </a>
           </div>
         </div>
         <div class="hidden-md-up text-sm-center mobile">
-          <div class="float-xs-left" id="menu-icon">
-            <i class="material-icons d-inline">&#xE5D2;</i>
-          </div>
           <div class="float-xs-right" id="_mobile_cart"></div>
           <div class="float-xs-right" id="_mobile_user_info"></div>
-          <a href="{$urls.base_url}">
-                  <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-                </a>
-          <div class="clearfix"></div>
+          <div class="top-logo" id="mobile_logo">
+            <a href="{$urls.base_url}">
+              <img src="{$urls.theme_assets}img/iliana.PNG" alt="test">
+            </a>
+          </div>
+        </div>
+        <div class="clearfix"></div>
         </div>
       </div>
     </div>
@@ -56,9 +56,9 @@
 {/block}
 
 {block name='header_top'}
-  <div class="">
+  <div class="header-top pb-0">
     <div class="container-fluid">
-      <div class="row" style="display:flex;justify-content:center; padding-bottom:10px;">
+      <div class="row iliana-row">
         <div class="col-md-2 hidden-xl-down" id="_desktop_logo">
             {if $page.page_name == 'index'}
               <h1>
@@ -74,7 +74,7 @@
         </div>
         <div class="col-md-11 col-sm-12 position-static">
           <div class="row">
-            {hook h='displayTop'}
+            {widget name="ps_mainmenu"}
             <div class="col-md-6 col-lg-6 text-sm-center text-md-left mx-0">
               <div class="row">
                 <div class="col-md-12 text-right hidden-sm-down">
