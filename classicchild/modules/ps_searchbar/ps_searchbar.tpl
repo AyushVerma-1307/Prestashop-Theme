@@ -28,12 +28,13 @@
     <input type="hidden" name="controller" value="search">
     
     <div class="search-bar-wrapper">
+        <i class="material-icons search-icon">&#xE8B6;</i> <!-- Search icon -->
         <input type="text" id="search-bar" class="search-input" name="s" value="{$search_string}" placeholder="{l s='Search our catalog' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
-        <button type="button" class="close-button" onclick="closeSearchBar()">×</button>
+        <button type="button" class="close-button p-0" onclick="closeSearchBar()">×</button>
     </div>
     
-    <button type="button" id="search-button" onclick="showSearchInput()">
-        <i class="material-icons search">&#xE8B6;</i>
+    <button type="button" id="search-button" class="p-0" onclick="showSearchInput()">
+        <i class="material-icons search hidden-sm-down">&#xE8B6;</i>
         <span class="hidden-xl-down">{l s='Search' d='Shop.Theme.Catalog'}</span>
     </button>
     </form>

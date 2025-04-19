@@ -48,10 +48,17 @@ $(document).ready(function () {
 
 const showSearchInput = () => {
     const searchBar = document.querySelector(".search-bar-wrapper");
+    var header = document.querySelector("#header.navbar-header");
+    if (searchBar && header) {
+        header.insertAdjacentElement("afterend", searchBar);
+        console.log("Search bar moved below header");
+    } else {
+        console.log("Search bar or header not found");
+    }
     searchBar.classList.toggle("active");
 };
 function closeSearchBar() {
-    document.querySelector('.search-bar-wrapper').classList.remove('active');
+    document.querySelector(".search-bar-wrapper").classList.remove("active");
 }
 
 

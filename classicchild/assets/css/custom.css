@@ -4,6 +4,9 @@
     margin-bottom: 5px; /* Adjust the value as needed */
   }
 }
+#header .header-nav {
+  margin-bottom: 0px; /* Adjust the value as needed */
+}
 #mobile_logo {
   margin-left: 3rem;
 }
@@ -109,7 +112,7 @@ address, dl, ol, ul {
 
 .search-bar-wrapper {
   position: fixed;
-  top: -70px;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
@@ -122,7 +125,7 @@ address, dl, ol, ul {
 
 .search-bar-wrapper.active {
   z-index: 10;
-  top: 110px;
+  top: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,11 +133,19 @@ address, dl, ol, ul {
 
 .search-input {
   width: 100%;
-  max-width: 500px;
+  max-width: 80%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: none; /* Remove border */
+  outline: none; /* Remove focus outline */
+  border-radius: 25px; /* Remove rounded corners */
+  background-color: #f9f9f9; /* Light background for a clean look */
+}
+
+
+.search-input:focus {
+  background-color: #fff; /* Highlight background on focus */
+  box-shadow: 0 0 5px rgba(225, 231, 238, 0.5); /* Add focus shadow */
 }
 
 .close-button {
@@ -157,6 +168,15 @@ address, dl, ol, ul {
   cursor: pointer;
   outline: none;
   transition: background-color 0.3s ease;
+}
+
+#mobile-search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+  margin-top: 14px;
 }
 
 /* ------------------------------- navbar --------------------------------- */
@@ -207,6 +227,13 @@ address, dl, ol, ul {
   .simple-nav {
     flex-direction: column; /* Stack items vertically */
     gap: 10px; /* Space between menu items */
+  }
+  .search-bar-wrapper.active {
+    z-index: 10;
+    top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -326,6 +353,7 @@ address, dl, ol, ul {
   padding: 10px;
   z-index: 1000;
   width: 200px;
+  border-radius: 25px;
 }
 
 .simple-nav .submenu ul {
@@ -358,9 +386,30 @@ address, dl, ol, ul {
 }
 
 .simple-nav .has-submenu:hover .submenu {
-  display: block; /* Show submenu on hover */
+  display: flex; /* Show submenu on hover */
+  justify-content: center;
+  align-items: center;
 }
 
+/* Mobile menu styles */
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .mobile-navbar .submenu {
+    display: none; /* Hide submenus by default */
+  }
+
+  .mobile-navbar .has-submenu.open .submenu {
+    display: block; /* Show submenu when the parent is open */
+  }
+
+  .mobile-navbar .submenu ul {
+    padding-left: 15px; /* Indent submenu items */
+  }
+
+  .mobile-navbar .has-submenu > a {
+    cursor: pointer; /* Indicate clickable items */
+  }
+}
 /* ------------------------------------- navbar end --------------------------------- */
 
 .material-icons {
